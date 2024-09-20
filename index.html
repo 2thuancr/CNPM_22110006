@@ -6,71 +6,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>JobHub</title>
+    <script src="./signup.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <div class="container "  style="width: 50vw;">
+    <div class="container " style="width: 50vw;">
         <h2 class="d-flex justify-content-center m-3 p-3 " style="color: azure;">Sign up</h2>
         <!-- Information -->
         <div class="information">
-            <div class="row">
-                <div class="col-6">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control form-control-sm" id="FirstName" placeholder="First Name">
-                        <label for="FirstName">First Name</label>
+            <div class="step-1 active" id="step-1">
+                <!-- UserName -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control form-control-sm" id="UserName"
+                                placeholder="User Name">
+                            <label for="UserName">User Name</label>
+                        </div>
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control form-control-sm" id="LastName" placeholder="Last Name">
-                        <label for="LastName">Last Name</label>
+                <!-- Email -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control form-control-sm" id="Email" placeholder="Email">
+                            <label for="Email">Email</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control form-control-sm" id="Password"
+                                placeholder="Password">
+                            <label for="Password">Password</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Confirm password -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control form-control-sm" id="ConfirmPassword"
+                                placeholder="Confirm Password">
+                            <label for="ConfirmPassword">Confirm Password</label>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control form-control-sm" id="Email" placeholder="Email">
-                        <label for="Email">Email</label>
+            <div class="step-2 inactive" id="step-2">
+                <!-- full name  -->
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control form-control-sm" id="FirstName"
+                                placeholder="First Name">
+                            <label for="FirstName">First Name</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control form-control-sm" id="LastName"
+                                placeholder="Last Name">
+                            <label for="LastName">Last Name</label>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control form-control-sm" id="Password"
-                            placeholder="Password">
-                        <label for="Password">Password</label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="form-floating mb-3">
-                        <input type="password" class="form-control form-control-sm" id="ConfirmPassword"
-                            placeholder="Confirm Password">
-                        <label for="ConfirmPassword">Confirm Password</label>
-                    </div>
-                </div>
-            </div>
-            <!-- term of use -->
-            <div class="terms ">
-                <div class="input-group mb-3 d-flex justify-content-center">
-                    <div class="">
-                        <input class="form-check-input mt-0" type="checkbox" value=""
-                            aria-label="Checkbox for following text input">
+            <div class="step-3 inactive" id="step-3">
+                <!-- term of use -->
+                <div class="terms ">
+                    <div class="input-group mb-3 d-flex justify-content-center">
+                        <h2>Terms of Use and privacy policy </h2>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eveniet corporis
+                                exercitationem dolore deleniti animi libero nulla corrupti. Qui molestias, soluta
+                                maiores incidunt iste et dolorum reiciendis nobis aliquam animi!
+                            </p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A temporibus recusandae nemo
+                                reiciendis fuga, maiores, impedit, magnam quidem dolorem voluptate voluptatibus deserunt
+                                autem culpa modi consequatur deleniti. Quas, obcaecati maxime!</p>
+                        </div>
+
+                        <div class="">
+                            <input class="form-check-input mt-0" type="checkbox" value=""
+                                aria-label="Checkbox for following text input">
                             <span class="px-3">I accept the Terms of Use & privacy policy</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- sign up -->
-            <div class="signup mb-3">
-                <div class="d-grid gap-2 col-6 mx-auto ">
-                    <button class="btn btn-primary" type="button">Sign Up</button>
+            <div class="step-4 inactive" id="step-4">
+                <!-- sign up -->
+                <div class="signup mb-3">
+                    <div class="d-grid gap-2 col-6 mx-auto ">
+                        <button class="btn btn-primary" type="button">Sign Up</button>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Button next/previous -->
+            <div class="btn-group d-flex justify-content-center" role="group">
+                <button type="button" id="previous" class="btn btn-outline-secondary inactive">Previous</button>
+                <button type="button" id="next" class="btn btn-outline-primary active">Next</button>
             </div>
             <!-- login -->
             <div class="login d-flex justify-content-center">
@@ -87,6 +130,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
+
+        <script>
+            InitSignup();
+        </script>
 
 </body>
 
