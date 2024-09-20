@@ -1,0 +1,19 @@
+.container {
+    background-color: #8787c5;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem hsl(0, 0%, 100%),
+    0 0 2rem #8787c5,
+    0 0 0.8rem #8787c5,
+    0 0 2.8rem #8787c5,
+    inset 0 0 1.3rem #8787c5; 
+}
+.container .terms,
+.container .login,
+.container .footer {
+    color: white;
+}
+.row {
+    padding: 0 10px;
+}
