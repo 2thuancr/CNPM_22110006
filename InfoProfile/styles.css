@@ -1,5 +1,5 @@
 body{
-    background: #f7f7ff;
+    background: hsl(200, 62%, 83%) !important;
     margin-top:20px;
 }
 .card {
